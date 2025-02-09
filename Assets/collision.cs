@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine.Rendering.Universal; // For Light2D
 
 public class ChangeOrbImageAndAnimator : MonoBehaviour
@@ -18,6 +18,7 @@ public class ChangeOrbImageAndAnimator : MonoBehaviour
         orbRenderer = GetComponent<SpriteRenderer>();
         orbAnimator = GetComponent<Animator>();
         orbLight = GetComponent<Light2D>();
+
 
         // Check if the components exist
         if (orbRenderer == null)
