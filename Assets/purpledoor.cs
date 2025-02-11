@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class ButtonBehavior : MonoBehaviour
+public class PurpleDoor : MonoBehaviour
 {
     public GameObject door;
     // Start is called before the first frame update
@@ -9,12 +9,12 @@ public class ButtonBehavior : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            door.SetActive(false);
-            GameObject.Find("Blue door").GetComponent<Animator>().SetBool("Door", true);
+            door.SetActive(true);
+            GameObject.Find("Blue door").GetComponent<Animator>().SetBool("Door", false);
         }
         else
         {
-            door.SetActive(true);
+            door.SetActive(false);
         }
     }
 
