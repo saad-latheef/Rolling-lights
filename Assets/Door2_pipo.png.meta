@@ -141,19 +141,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -522,23 +509,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Door2_pipo_0: -8597686222848329219
-      Door2_pipo_1: -8891499494233061214
-      Door2_pipo_10: -3714319355116980034
-      Door2_pipo_11: -8689851457255969485
-      Door2_pipo_12: -2872844942842442305
-      Door2_pipo_13: -8283313361698694181
-      Door2_pipo_14: 1458122286113076484
-      Door2_pipo_15: 1119843234248649235
-      Door2_pipo_2: 834255127136044185
-      Door2_pipo_3: -2559203469631848017
-      Door2_pipo_4: -7322710988291986442
-      Door2_pipo_5: 6546672625700160552
-      Door2_pipo_6: 4793812157196476444
-      Door2_pipo_7: 612275315331427926
-      Door2_pipo_8: 8900302012809616170
-      Door2_pipo_9: 3640905417980296332
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

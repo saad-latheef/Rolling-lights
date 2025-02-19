@@ -38,7 +38,7 @@ public class ChangeOrbImageAndAnimator : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the orb collided with a specific trigger
-        if (other.CompareTag("bluechanger")) // Replace "ColorChanger" with your trigger's tag
+        if (other.CompareTag("changer")) // Replace "ColorChanger" with your trigger's tag
         {
             // Change the orb's sprite to the new one
             if (newOrbSprite != null)
