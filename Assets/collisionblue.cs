@@ -2,6 +2,8 @@ using UnityEngine;
 
 using UnityEngine.Rendering.Universal; // For Light2D
 
+namespace collid
+{
 public class ChangeOrbImageAndAnimator : MonoBehaviour
 {
     public Sprite newOrbSprite; // The new sprite to change to when triggered
@@ -72,4 +74,5 @@ public class ChangeOrbImageAndAnimator : MonoBehaviour
             }
         }
     }
+}
 }
