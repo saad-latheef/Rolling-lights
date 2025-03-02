@@ -10,7 +10,7 @@ public class ButtonBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             door.SetActive(false);
-            GameObject.Find("Blue door").GetComponent<Animator>().SetBool("Door", true);
+            GameObject.Find("Blue door (1)").GetComponent<Animator>().SetBool("Door", true);
         }
         else
         {

@@ -9,12 +9,12 @@ public class PurpleDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            door.SetActive(true);
-            GameObject.Find("Blue door").GetComponent<Animator>().SetBool("Door", false);
+            door.SetActive(false);
+            GameObject.Find("Blue door").GetComponent<Animator>().SetBool("Door", true);
         }
         else
         {
-            door.SetActive(false);
+            door.SetActive(true);
         }
     }
 
