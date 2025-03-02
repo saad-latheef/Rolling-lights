@@ -7,6 +7,10 @@ TagManager:
   - Bluedoor
   - bluechanger
   - purplechanger
+  - whitechanger
+  - button
+  - newbutton
+  - Soldier
   layers:
   - Default
   - TransparentFX
