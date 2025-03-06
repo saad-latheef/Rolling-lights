@@ -8,6 +8,10 @@ TagManager:
   - bluechanger
   - purplechanger
   - whitechanger
+  - 1movingmonster
+  - 2movingmonster
+  - 3 moving monster
+  - 3movingmonster
   layers:
   - Default
   - TransparentFX
