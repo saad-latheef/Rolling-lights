@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class monstermovment1 : MonoBehaviour
+public class movingmonster : MonoBehaviour
 {
     public float speed = 2f; // Speed of movement
     public float distance = 5f; // Distance to move
