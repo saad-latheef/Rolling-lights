@@ -9,8 +9,8 @@ TagManager:
   - purplechanger
   - whitechanger
   - movingmonster
-  - ShrinkBox
-  - GrowBox
+  - Smallbox
+  - Bigbox
   layers:
   - Default
   - TransparentFX

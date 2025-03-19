@@ -2,29 +2,27 @@ using UnityEngine;
 
 public class BallSizeController : MonoBehaviour
 {
-    private Vector3 originalScale; // Store the original size of the ball
-    public float shrinkScale = 2f; // Scale when the ball shrinks
+    private Vector3 originalSize;
+    public Vector3 smallSize = new Vector3(0.5f, 0.5f, 1f); // Adjust as needed
 
     void Start()
     {
-        // Save the original scale of the ball
-        originalScale = transform.localScale;
+        originalSize = transform.localScale; // Store the original size
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the ball collides with the "Shrink Box"
-        if (other.CompareTag("ShrinkBox"))
-        {
-            // Shrink the ball
-            transform.localScale = originalScale * shrinkScale;
-        }
+        Debug.Log("Collision detected with: " + other.gameObject.name); // Check what the ball is touching
 
-        // Check if the ball collides with the "Grow Box"
-        if (other.CompareTag("GrowBox"))
+        if (other.CompareTag("Smallbox"))
         {
-            // Return the ball to its original size
-            transform.localScale = originalScale;
+            transform.localScale = smallSize;
+            Debug.Log("Ball Shrunk! New Size: " + transform.localScale);
+        }
+        else if (other.CompareTag("Bigbox"))
+        {
+            transform.localScale = originalSize;
+            Debug.Log("Ball Restored! New Size: " + transform.localScale);
         }
     }
 }
