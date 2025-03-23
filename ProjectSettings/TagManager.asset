@@ -7,6 +7,10 @@ TagManager:
   - Bluedoor
   - bluechanger
   - purplechanger
+  - whitechanger
+  - ghost
+  - Purpledoor
+  - redchanger
   layers:
   - Default
   - TransparentFX
