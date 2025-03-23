@@ -11,6 +11,7 @@ public class AutoTeleport : MonoBehaviour
     public GameObject teleportEffect; // Optional teleport particle effect
 
     private bool playerInside = false; // Tracks if player is inside trigger zone
+    private bool isTeleporting = false; // Prevents multiple teleports
     private Transform playerTransform;
     private AudioSource audioSource;
 
@@ -21,7 +22,7 @@ public class AutoTeleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isTeleporting) // Avoid multiple calls
         {
             playerTransform = other.transform;
             playerInside = true;
@@ -39,7 +40,7 @@ public class AutoTeleport : MonoBehaviour
 
     private void Update()
     {
-        if (autoTeleportEnabled && playerInside)
+        if (autoTeleportEnabled && playerInside && !isTeleporting)
         {
             StartCoroutine(PerformAutoTeleport());
         }
@@ -48,7 +49,7 @@ public class AutoTeleport : MonoBehaviour
     IEnumerator PerformAutoTeleport()
     {
         yield return new WaitForSeconds(teleportInterval);
-        if (playerInside)
+        if (playerInside && !isTeleporting)
         {
             StartCoroutine(TeleportPlayer());
         }
@@ -56,7 +57,9 @@ public class AutoTeleport : MonoBehaviour
 
     IEnumerator TeleportPlayer()
     {
-        if (playerTransform == null) yield break;
+        if (playerTransform == null || isTeleporting) yield break;
+
+        isTeleporting = true; // Prevent multiple teleports
 
         SpriteRenderer playerSprite = playerTransform.GetComponent<SpriteRenderer>();
 
@@ -66,7 +69,7 @@ public class AutoTeleport : MonoBehaviour
             yield return StartCoroutine(FadeSprite(playerSprite, 1f, 0f, fadeDuration));
         }
 
-        // Play teleport sound
+        // Play teleport sound only once
         if (teleportSound != null)
         {
             audioSource.PlayOneShot(teleportSound);
@@ -92,6 +95,9 @@ public class AutoTeleport : MonoBehaviour
         {
             yield return StartCoroutine(FadeSprite(playerSprite, 0f, 1f, fadeDuration));
         }
+
+        yield return new WaitForSeconds(0.2f); // Small delay before allowing new teleport
+        isTeleporting = false; // Reset teleport flag
     }
 
     IEnumerator FadeSprite(SpriteRenderer sprite, float startAlpha, float endAlpha, float duration)
