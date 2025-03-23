@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1653458075902058440}
   - component: {fileID: 277119194896140341}
   m_Layer: 0
-  m_Name: Blue basechip_0 (1)
+  m_Name: move soldier
   m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

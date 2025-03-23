@@ -11,6 +11,8 @@ TagManager:
   - button
   - newbutton
   - Soldier
+  - colliderTag
+  - box
   layers:
   - Default
   - TransparentFX
