@@ -12645,10 +12645,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 393695533647025091, guid: a4bc972427f70654895e237dc80c304d, type: 3}
+      propertyPath: movementSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b7cbb23497bb5a541a101c444ce3468d, type: 3}
     - target: {fileID: 701293824526503876, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 701293824526503876, guid: a4bc972427f70654895e237dc80c304d, type: 3}
+      propertyPath: movementSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4116f0e3bbb49bf44832df83cfd54104, type: 3}
     - target: {fileID: 808778092870995318, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_Intensity
       value: 7
@@ -12675,11 +12683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.81
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.z
