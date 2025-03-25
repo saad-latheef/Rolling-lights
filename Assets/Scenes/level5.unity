@@ -301,8 +301,8 @@ MonoBehaviour:
   monster: {fileID: 202023367}
   moveOffset: {x: 0, y: -0.3, z: 0}
   audioSource: {fileID: 202023372}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!61 &48636708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,7 +1253,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202023367}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1478,9 +1478,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 1743771866}
   moveOffset: {x: 0, y: 0.5, z: 0}
-  audioSource: {fileID: 506269627}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  audioSource: {fileID: 1743771871}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!212 &241030003
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10417,8 +10417,8 @@ MonoBehaviour:
   monster: {fileID: 506269622}
   moveOffset: {x: 0, y: 0.5, z: 0}
   audioSource: {fileID: 506269627}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!212 &1290260268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12683,11 +12683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 6.37
       objectReference: {fileID: 0}
     - target: {fileID: 7197655485230748421, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13136,8 +13136,8 @@ MonoBehaviour:
   monster: {fileID: 1349049500}
   moveOffset: {x: 0, y: -0.5, z: 0}
   audioSource: {fileID: 1349049505}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!212 &1556104440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14769,8 +14769,8 @@ MonoBehaviour:
   monster: {fileID: 1029566907}
   moveOffset: {x: 0.35, y: 0, z: 0}
   audioSource: {fileID: 1029566913}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!212 &1652021878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15544,6 +15544,7 @@ GameObject:
   - component: {fileID: 1743771870}
   - component: {fileID: 1743771869}
   - component: {fileID: 1743771868}
+  - component: {fileID: 1743771871}
   m_Layer: 0
   m_Name: monster 5
   m_TagString: Untagged
@@ -15694,6 +15695,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1743771871
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743771866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1751291790
 GameObject:
   m_ObjectHideFlags: 0
@@ -16837,8 +16935,8 @@ Transform:
   - {fileID: 48636706}
   - {fileID: 1652021876}
   - {fileID: 1556104438}
-  - {fileID: 1290260266}
   - {fileID: 241030001}
+  - {fileID: 1290260266}
   - {fileID: 1751291791}
   - {fileID: 202023370}
   - {fileID: 1029566908}
@@ -18825,8 +18923,8 @@ MonoBehaviour:
   monster: {fileID: 1751291790}
   moveOffset: {x: 0, y: -0.5, z: 0}
   audioSource: {fileID: 1751291795}
-  moveSound: {fileID: 0}
-  returnSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: bb7d4b26c59b91b4888f96ad47880f70, type: 3}
+  returnSound: {fileID: 8300000, guid: 3ce5f1b69a7ec4843aaf2c345c425793, type: 3}
 --- !u!212 &2099285611
 SpriteRenderer:
   m_ObjectHideFlags: 0
