@@ -1,23 +1,23 @@
 using UnityEngine;
 
 
-public class PurpleDoor : MonoBehaviour
+public class RedDoor : MonoBehaviour
 {
 
-    public GameObject pdoor;
+    public GameObject rdoor;
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            GameObject.Find("Red door").GetComponent<Animator>().SetBool("rdoor", true);
 
-            GameObject.Find("Purple door").GetComponent<Animator>().SetBool("pdoor", true);
-            pdoor.SetActive(false);
+            rdoor.SetActive(false);
         }
         else
         {
 
-            pdoor.SetActive(true);
+            rdoor.SetActive(true);
         }
     }
 

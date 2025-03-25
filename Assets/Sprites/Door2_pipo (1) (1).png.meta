@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 1b23578df0bdaa849aa38b5781c3a95d
+guid: 26bcebc6e7d5e4c49a210a05f3ed1d67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010083313920067792
-    second: purple base chip_0
+      213: 7665110303788953613
+    second: Door2_pipo (1) (1)_0
+  - first:
+      213: 8944345624639245116
+    second: Door2_pipo (1) (1)_1
+  - first:
+      213: -349951648699359524
+    second: Door2_pipo (1) (1)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: purple base chip_0
+      name: Door2_pipo (1) (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 6
+        width: 33
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7716194, y: 0.61276585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 037be15a6f0c5f280800000000000000
-      internalID: -9010083313920067792
+      spriteID: d00f685b531ff5a60800000000000000
+      internalID: 7665110303788953613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door2_pipo (1) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 26
+        height: 71
+      alignment: 9
+      pivot: {x: 0.78958803, y: 0.5050498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b01f8d4f2b02c70800000000000000
+      internalID: 8944345624639245116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door2_pipo (1) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 10
+        width: 11
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde56b264d8b42bf0800000000000000
+      internalID: -349951648699359524
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 29b7202a7e782a74084f24477ffa3618
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      purple base chip_0: -9010083313920067792
+      Door2_pipo (1) (1)_0: 7665110303788953613
+      Door2_pipo (1) (1)_1: 8944345624639245116
+      Door2_pipo (1) (1)_2: -349951648699359524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

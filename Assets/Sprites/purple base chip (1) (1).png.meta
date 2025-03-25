@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1b23578df0bdaa849aa38b5781c3a95d
+guid: aace6cad739caed4499d100377c37804
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010083313920067792
-    second: purple base chip_0
+      213: 3012306465055322428
+    second: purple base chip (1) (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: purple base chip_0
+      name: purple base chip (1) (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 037be15a6f0c5f280800000000000000
-      internalID: -9010083313920067792
+      spriteID: c313c3425ccddc920800000000000000
+      internalID: 3012306465055322428
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      purple base chip_0: -9010083313920067792
+      purple base chip (1) (1)_0: 3012306465055322428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
