@@ -13,6 +13,7 @@ TagManager:
   - Soldier
   - colliderTag
   - box
+  - RemoveBox
   layers:
   - Default
   - TransparentFX

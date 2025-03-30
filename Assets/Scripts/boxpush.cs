@@ -1,59 +1,66 @@
 using UnityEngine;
 
-public class PushableBox : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))] // Ensures Rigidbody is attached
+public class PushableBox3D : MonoBehaviour
 {
-    public float pushForce = 5f; // Force applied to the box when pushed
-    public Transform topBoundary; // Top boundary
-    public Transform rightBoundary; // Right boundary
-    public Transform bottomBoundary; // Bottom boundary
-    public string colliderTag = "RemoveBox"; // Tag of the collider that removes the box
+    [Header("Boundaries")]
+    public Transform rightBoundary;
+    public Transform topBoundary;
+    public Transform bottomBoundary;
+    public Transform frontBoundary;
+    public Transform backBoundary;
+    public float pushForce = 10f; // Increased for better response
 
-    private Rigidbody2D rb;
+    [Header("Soldier Control")]
+    public GameObject soldier;
+    public Vector3 soldierTargetPosition;
+    public float soldierMoveSpeed = 5f;
+    public string triggerTag = "RemoveBox";
 
-    private void Start()
+    private Rigidbody rb;
+    private bool shouldMoveSoldier;
+
+    void Start()
     {
-        // Get the Rigidbody2D component
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = false; // Critical for physics movement
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous; // Better collision
+    }
 
-        // Check if boundaries are assigned
-        if (topBoundary == null || rightBoundary == null || bottomBoundary == null)
+    void FixedUpdate() // Using FixedUpdate for physics
+    {
+        if (shouldMoveSoldier && soldier)
         {
-            Debug.LogError("Boundaries are not assigned!");
+            soldier.transform.position = Vector3.MoveTowards(
+                soldier.transform.position,
+                soldierTargetPosition,
+                soldierMoveSpeed * Time.fixedDeltaTime
+            );
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player")) // Ensure your ball has the tag "Player"
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Get the direction of the collision
-            Vector2 direction = collision.contacts[0].point - (Vector2)transform.position;
-            direction = -direction.normalized; // Reverse the direction to push the box
-
-            // Calculate the new position
-            Vector2 newPosition = rb.position + direction * pushForce * Time.deltaTime;
-
-            // Clamp the new position within the boundaries
-            newPosition.x = Mathf.Clamp(newPosition.x, -Mathf.Infinity, rightBoundary.position.x); // Constrain X to the right boundary
-            newPosition.y = Mathf.Clamp(newPosition.y, bottomBoundary.position.y, topBoundary.position.y); // Constrain Y between bottom and top boundaries
-
-            // Move the box
-            rb.MovePosition(newPosition);
+            // Calculate push direction from collision point
+            Vector3 pushDir = (transform.position - collision.contacts[0].point).normalized;
+            pushDir.y = 0; // Optional: Remove vertical push if needed
+            
+            // Apply force directly to Rigidbody
+            rb.AddForce(pushDir * pushForce, ForceMode.Impulse);
+            
+            Debug.DrawRay(collision.contacts[0].point, pushDir * 5, Color.red, 2f);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(colliderTag)) // Check if the collider has the specified tag
+        if (other.CompareTag(triggerTag))
         {
-            RemoveBox();
+            Destroy(gameObject, 0.1f); // Small delay to avoid frame issues
+            shouldMoveSoldier = true;
+            Debug.Log("Box destroyed, soldier moving");
         }
-    }
-
-    private void RemoveBox()
-    {
-        // Remove the box from the scene
-        Destroy(gameObject);
-        Debug.Log("Box removed!");
     }
 }

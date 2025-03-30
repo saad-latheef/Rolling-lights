@@ -3,7 +3,7 @@ using UnityEngine;
 public class ButtonTrigger : MonoBehaviour
 {
     public GameObject soldier; // Reference to the soldier GameObject
-    public Vector2 targetPosition; // Target position for the soldier to move to
+    public Vector3 targetPosition; // Target position for the soldier to move to
     public AudioClip buttonSound; // Sound to play when triggered
 
     private AudioSource audioSource;
