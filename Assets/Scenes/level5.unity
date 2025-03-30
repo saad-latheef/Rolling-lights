@@ -12059,19 +12059,19 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 4116f0e3bbb49bf44832df83cfd54104, type: 3}
     - target: {fileID: 808778092870995318, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.7411765
       objectReference: {fileID: 0}
     - target: {fileID: 808778092870995318, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.44705883
       objectReference: {fileID: 0}
     - target: {fileID: 808778092870995318, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.48235294
       objectReference: {fileID: 0}
     - target: {fileID: 808778092870995318, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: m_Intensity
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4878729938336270073, guid: a4bc972427f70654895e237dc80c304d, type: 3}
       propertyPath: newLightColor.b
