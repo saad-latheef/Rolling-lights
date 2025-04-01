@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 240763504199812598}
   - component: {fileID: 117695306810134312}
   - component: {fileID: 3720506659487321199}
+  - component: {fileID: 7425850847694832598}
   - component: {fileID: 3395433711720334716}
   m_Layer: 0
   m_Name: Purple basechip
@@ -135,6 +136,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &7425850847694832598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251953111846378349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31bbd53202e579343b4e63819d856fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soldier: {fileID: 0}
+  targetPosition: {x: 6.36, y: 8.13}
+  buttonSound: {fileID: 0}
 --- !u!114 &3395433711720334716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,4 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ee7622b041fcf4c80b9f0d787dc0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
+  soldier: {fileID: 0}
+  targetPosition: {x: 0, y: 0}
+  buttonSound: {fileID: 0}

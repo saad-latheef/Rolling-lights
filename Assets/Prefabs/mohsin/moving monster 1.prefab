@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1388357845018900730}
   - component: {fileID: 6388922316042182827}
   - component: {fileID: 2969780055547692877}
-  - component: {fileID: 6863655942128090637}
   m_Layer: 0
   m_Name: moving monster 1
   m_TagString: Player
@@ -233,22 +232,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6863655942128090637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3374495986751933074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3275c92a9864f164c822edee88c043b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  failScreen: {fileID: 0}
-  failScreenAnimator: {fileID: 0}
-  failSound: {fileID: 8300000, guid: 0808e8fda22dea147bfc00cf4252d619, type: 3}
-  restartButton: {fileID: 0}
-  speed: 1.3
-  distance: 0.65
-  moveOnXAxis: 0

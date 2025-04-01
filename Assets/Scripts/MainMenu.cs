@@ -5,6 +5,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelSelection"); // Load the level selection screen
+            SceneManager.LoadScene("LevelSelection"); // Load the level selection screen
     }
 }

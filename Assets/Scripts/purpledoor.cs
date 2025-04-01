@@ -1,24 +1,48 @@
 using UnityEngine;
 
-
-public class PurpleDoor : MonoBehaviour
+public class ButtonTriggerlevel6 : MonoBehaviour
 {
+    public GameObject soldier; // Reference to the soldier GameObject
+    public Vector2 targetPosition; // Target position for the soldier to move to
+    public AudioClip buttonSound; // Sound to play when triggered
 
-    public GameObject pdoor;
-    // Start is called before the first frame update
-    void OnTriggerEnter2D(Collider2D other)
+    private AudioSource audioSource;
+
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player"))
+        // Get or add an AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
         {
-
-            GameObject.Find("Purple door").GetComponent<Animator>().SetBool("pdoor", true);
-            pdoor.SetActive(false);
-        }
-        else
-        {
-
-            pdoor.SetActive(true);
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player")) // Ensure your ball has the tag "Player"
+        {
+            MoveSoldier();
+            PlaySound();
+        }
+    }
+
+    private void MoveSoldier()
+    {
+        SoldierController soldierController = soldier.GetComponent<SoldierController>();
+        if (soldierController != null)
+        {
+            soldierController.MoveToTarget(targetPosition);
+            Debug.Log("Soldier Moved");
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (buttonSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(buttonSound); // Play the sound
+            Debug.Log("Sound Played: " + buttonSound.name);
+        }
+    }
 }
