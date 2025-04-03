@@ -1,68 +1,43 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Runtime.InteropServices;
+using System.Runtime.InteropServices; // Required for Windows API
 
 public class WindowControls : MonoBehaviour
 {
-    public RectTransform windowBar; // Assign in Inspector
-    public float hideSpeed = 0.5f;  // Speed for showing/hiding
-
-    private bool isVisible = false;
-
-    // Windows API functions for window control
-    [DllImport("user32.dll")] private static extern void ShowWindow(System.IntPtr hWnd, int nCmdShow);
+    // Import Windows API functions
+    [DllImport("user32.dll")] private static extern int ShowWindow(System.IntPtr hWnd, int nCmdShow);
     [DllImport("user32.dll")] private static extern System.IntPtr GetActiveWindow();
-    
+
     private const int SW_MINIMIZE = 6;
     private const int SW_MAXIMIZE = 3;
     private const int SW_RESTORE = 9;
 
-    void Awake()
+    private bool isFullscreen = false;
+
+    // Function to close the game
+    public void CloseGame()
     {
-        DontDestroyOnLoad(gameObject); // Keep across scenes
+        Application.Quit();
     }
 
-    void Update()
-    {
-        if (Input.mousePosition.y >= Screen.height - 10) 
-        {
-            if (!isVisible) ShowBar();
-        }
-        else 
-        {
-            if (isVisible) HideBar();
-        }
-    }
-
-    void ShowBar()
-    {
-        isVisible = true;
-        LeanTween.moveY(windowBar, 0, hideSpeed).setEase(LeanTweenType.easeOutQuad);
-    }
-
-    void HideBar()
-    {
-        isVisible = false;
-        LeanTween.moveY(windowBar, -windowBar.rect.height, hideSpeed).setEase(LeanTweenType.easeInQuad);
-    }
-
-    public void MinimizeWindow()
+    // Function to minimize the game window
+    public void MinimizeGame()
     {
         ShowWindow(GetActiveWindow(), SW_MINIMIZE);
     }
 
-    public void MaximizeWindow()
+    // Function to toggle fullscreen mode
+    public void ToggleFullscreen()
     {
-        ShowWindow(GetActiveWindow(), SW_MAXIMIZE);
-    }
+        isFullscreen = !isFullscreen;
 
-    public void RestoreWindow()
-    {
-        ShowWindow(GetActiveWindow(), SW_RESTORE);
-    }
-
-    public void CloseGame()
-    {
-        Application.Quit();
+        if (isFullscreen)
+        {
+            Screen.fullScreen = true;
+        }
+        else
+        {
+            Screen.fullScreen = false;
+            Screen.SetResolution(1280, 720, false); // Set window size when exiting fullscreen
+        }
     }
 }
