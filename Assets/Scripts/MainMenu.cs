@@ -20,4 +20,19 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelection"); // Load the level selection screen
     }
+void Start()
+{
+    if (!PlayerPrefs.HasKey("GameInitialized")) // Only reset for fresh installs
+    {
+        PlayerPrefs.DeleteAll(); // Clears all stored PlayerPrefs
+        PlayerPrefs.SetInt("UnlockedLevel", 1); // Ensures only Level 1 is unlocked
+        PlayerPrefs.SetInt("GameInitialized", 1); // Mark as initialized
+        PlayerPrefs.Save();
+    }
 }
+
+
+
+
+}
+
