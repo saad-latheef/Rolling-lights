@@ -8059,7 +8059,7 @@ PrefabInstance:
     - target: {fileID: 8234194018136622506, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 2361055498527146521}
+      objectReference: {fileID: 1004727404}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11192,11 +11192,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd084abfd9f221040a7d2f117079984a, type: 3}
---- !u!95 &2361055498527146521 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9146653936626361861, guid: dd084abfd9f221040a7d2f117079984a, type: 3}
-  m_PrefabInstance: {fileID: 2361055498527146520}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

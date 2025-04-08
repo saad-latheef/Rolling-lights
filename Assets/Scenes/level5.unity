@@ -6470,7 +6470,7 @@ PrefabInstance:
     - target: {fileID: 8234194018136622506, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 841536742}
+      objectReference: {fileID: 485661860}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -924,15 +924,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2891549
+      value: 0.6186022
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2891549
+      value: 0.6186022
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4130784
+      value: 0.8837175
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -964,11 +964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 39
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -37
+      value: -77
       objectReference: {fileID: 0}
     - target: {fileID: 8540109763383166141, guid: 86f45c85b943beb469deb56e88e3f6c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8281,6 +8281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5715460125629958396, guid: 09b51f0a3580839478a9da8bb798a2aa, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8086073444785441331, guid: 09b51f0a3580839478a9da8bb798a2aa, type: 3}
       propertyPath: m_Name
       value: FadePanel
@@ -9606,6 +9610,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3225107672138336693, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225107672138336693, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225107672138336693, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3274425884374819468, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
       propertyPath: m_Interactable
       value: 1
@@ -9628,7 +9644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745506960897870698, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7990498525866775701, guid: b90939b9b3989674aab8f3aa725faa53, type: 3}
       propertyPath: m_Name
